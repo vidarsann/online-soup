@@ -71,6 +71,7 @@ function ReceiptView(props){
                     <h3>Total</h3>
                     <h3>{props.state.totalAmount};-</h3>
                 </div>
+                <img src={cookingChef} alt="" className="cookingChefImg"/> 
             </div>
             <button className="trackOrderButton">Track your order</button>
         </div>
