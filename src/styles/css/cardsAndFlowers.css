@@ -1,0 +1,82 @@
+.cardsAndFlowersView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+.cardsAndFlowersView h1 {
+  z-index: 1;
+  font-family: Thasadith, Helvetica, sans-serif;
+  font-size: xxx-large;
+  font-weight: 100;
+}
+.cardsAndFlowersView h2 {
+  font-family: Thasadith, Helvetica, sans-serif;
+}
+
+.chooseBouquetDiv {
+  margin-top: 15px;
+  width: 90%;
+}
+
+.bouquetItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  font-family: Tinos, Helvetica, sans-serif;
+}
+.bouquetItem input {
+  height: 25px;
+  width: 25px;
+}
+
+.mediumFlowers {
+  margin-left: 35px;
+}
+
+.mediumh3 {
+  margin-left: 28px;
+}
+
+.smallFlowers {
+  margin-left: 14px;
+}
+
+.customizedGreetingTextArea {
+  padding: 5px;
+  margin-top: 12%;
+  width: 300px;
+  height: 100px;
+  border-radius: 10px;
+  box-shadow: inset 0px 1px 3px 3px lightgrey, 0px 4px 5px 2px lightgrey;
+  border: 1px solid grey;
+  font-family: Tinos, Helvetica, sans-serif;
+}
+
+textarea:active, textarea:focus {
+  outline: 0px !important;
+  -webkit-appearance: none;
+}
+
+.customizedGreetingTextArea::placeholder {
+  text-align: center;
+  font-family: Thasadith, Helvetica, sans-serif;
+  font-size: x-large;
+  padding-top: 10%;
+}
+
+.continueButton {
+  width: 100vw;
+  position: fixed;
+  height: 90px;
+  bottom: 0;
+  background-color: #ffd4a5;
+  font-family: Thasadith, Helvetica, sans-serif;
+  font-size: xx-large;
+  outline: none;
+  border: none;
+}
+
+/*# sourceMappingURL=cardsAndFlowers.css.map */

@@ -1,0 +1,104 @@
+.loginScreen {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.slideShowText {
+  font-family: Tinos, Helvetica, sans-serif;
+}
+
+.titlePicture {
+  margin-right: 2em;
+}
+
+.alice-carousel__stage-item {
+  text-align: center;
+}
+.alice-carousel__stage-item h2 {
+  margin-top: 1em;
+}
+
+.alice-carousel {
+  margin: 0 !important;
+}
+
+.inversedTopOvalCurvedRectangle {
+  text-align: center;
+  height: 100%;
+  padding-top: 4vh;
+  background: #ffd4a5;
+  color: white;
+}
+
+.inversedTopOvalCurvedRectangle::before {
+  content: "";
+  border-top: 9vh solid white;
+  border-left: 51vw solid white;
+  border-right: 49vw solid white;
+  border-radius: 50%;
+}
+
+.loginForm {
+  flex: 1;
+  margin-top: 10%;
+}
+.loginForm input {
+  text-align: center;
+}
+
+.facebookButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70%;
+  max-width: 300px;
+  padding: 5px;
+  font-family: Thasadith, Helvetica, sans-serif;
+  border: none;
+  border-radius: 30px;
+  background-color: #447dd1;
+  color: white;
+  font-size: 100%;
+}
+.facebookButton p {
+  color: white !important;
+  padding: 0 3em 0 0 !important;
+}
+
+.loginContainer {
+  text-align: -webkit-center;
+}
+.loginContainer p {
+  align-self: center;
+  color: black;
+  padding: 6px;
+}
+
+.loginSubmitButton {
+  display: none;
+}
+
+#disabledCellNumberInput {
+  width: 3em;
+  padding: 3px;
+  background-color: #ffd4a5;
+  border: none;
+  border-bottom: 1px solid black;
+  margin-right: 8px;
+}
+
+#interactiveCellNumberInput {
+  padding: 3px;
+  background-color: #ffd4a5;
+  border: none;
+  border-bottom: 1px solid black;
+  margin-right: 8px;
+  width: 8em;
+}
+
+#interactiveCellNumberInput:focus {
+  outline: none;
+}
+
+/*# sourceMappingURL=loginScreen.css.map */

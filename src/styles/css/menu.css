@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Squada+One&display=swap");
+.menuWithFoodItems {
+  width: 100%;
+  height: 100%;
+}
+
+.alice-carousel img {
+  width: 100%;
+  height: 250px;
+}
+
+.alice-carousel__dots {
+  text-align: start;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.alice-carousel__dots-item:not(.__custom):not(:last-child) {
+  margin-right: 10px;
+}
+
+.alice-carousel__dots-item.__active {
+  background-color: white !important;
+}
+
+.alice-carousel__dots-item {
+  border: 1px solid white !important;
+  background-color: transparent !important;
+  height: 10px !important;
+  width: 10px !important;
+}
+
+.menuSliderText {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 60px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  font-family: Thasadith, Helvetica, sans-serif;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.menuItemsParentDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menuTitle {
+  text-align: center;
+  margin-top: 10px;
+  font-family: "Squada One", Helvetica, sans-serif;
+  color: #ffd4a5;
+  font-size: x-large;
+}
+
+.menuItemMiniature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  width: 70%;
+  text-align: center;
+}
+.menuItemMiniature h2 {
+  font-family: Thasadith, Helvetica, sans-serif;
+}
+.menuItemMiniature p, .menuItemMiniature h3 {
+  font-family: Tinos, Helvetica, sans-serif;
+}
+.menuItemMiniature h3 {
+  position: absolute;
+  right: 0;
+  margin: 3px 12px 0px 0px;
+  font-size: x-large;
+}
+
+.menuItemMiniature:last-child {
+  margin-bottom: 60px;
+}
+
+.menuItemRoundedPicture {
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.titleAndVegetarian {
+  display: flex;
+  align-items: center;
+}
+.titleAndVegetarian img {
+  height: 25px;
+}
+
+#clickedMenuItemSlideOut {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  left: 0;
+  top: 0;
+  transition: transform 0.5s;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 10;
+}
+#clickedMenuItemSlideOut p {
+  font-family: Tinos, Helvetica, sans-serif;
+}
+#clickedMenuItemSlideOut h1, #clickedMenuItemSlideOut h3 {
+  font-family: Thasadith, Helvetica, sans-serif;
+}
+
+#clickedMenuItemSlideOut.hide {
+  transform: translate3d(100vw, 0, 0);
+}
+
+#clickedMenuItemSlideOut.show {
+  transform: translate3d(0vw, 0, 0);
+}
+
+.topBackgroundRectangleShape {
+  background-color: #ffd4a5;
+  height: 110px;
+  width: 100%;
+  position: absolute;
+}
+
+.topBackgroundOvalShape {
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  background-color: #ffd4a5;
+  border-radius: 50%;
+  top: 55px;
+}
+
+.slideOutSoupMainPictureDiv {
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+.slideOutSoupMainPicture {
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  background-color: white;
+}
+
+.slideOutSoupInfoDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slideOutTitleAndVegetarian {
+  display: flex;
+}
+.slideOutTitleAndVegetarian img {
+  width: 30px;
+}
+
+.nutritionBoxCollection {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 1em;
+}
+
+.nutritionBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffd4a5;
+  width: 55px;
+  height: 70px;
+  border-radius: 15px;
+  padding: 3px 0 3px 0;
+}
+.nutritionBox p {
+  font-size: x-small;
+}
+
+.nutritionInfoAmount {
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  margin-bottom: 2px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nutritionInfoAmount h3 {
+  font-family: Tinos, Helvetica, sans-serif !important;
+}
+
+.ingredientsAddToBasketDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin-top: 5%;
+}
+.ingredientsAddToBasketDiv p, .ingredientsAddToBasketDiv h3 {
+  color: #6f6f6f;
+}
+.ingredientsAddToBasketDiv h3 {
+  font-family: Tinos, Helvetica, sans-serif !important;
+  font-weight: lighter;
+}
+
+.ingredientDiv {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding-left: 15%;
+  margin-top: 3%;
+}
+.ingredientDiv p {
+  margin-left: 3%;
+}
+
+.ingredientPicture {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.slideOutAddToBasketButton {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: Tinos, Helvetica, sans-serif;
+  font-size: x-large;
+  color: #b68221;
+  border-radius: 5px;
+  border: none;
+  width: 65%;
+  height: 40px;
+  max-width: 260px;
+  margin-top: 10%;
+  background-color: #ffd4a5;
+}
+
+.slideOutAddToBasketButton:active {
+  outline: none;
+  border: none;
+}
+
+/*# sourceMappingURL=menu.css.map */

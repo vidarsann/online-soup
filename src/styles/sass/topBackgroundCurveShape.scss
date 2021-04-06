@@ -1,0 +1,21 @@
+@use 'base';
+
+.topBackgroundRectangleShape{
+    background-color: base.$primary-color;
+    height: 110px;
+    width: 100%;
+    position: absolute;
+}
+
+.topBackgroundOvalShape{
+    position: absolute;
+    height: 120px;
+    width: 100%;
+    background-color: base.$primary-color;
+    border-radius: 50%;
+    top: 55px;
+}
+
+.topBackgroundCurveShape{
+    width: 100%;
+}

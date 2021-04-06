@@ -1,0 +1,21 @@
+.topBackgroundRectangleShape {
+  background-color: #ffd4a5;
+  height: 110px;
+  width: 100%;
+  position: absolute;
+}
+
+.topBackgroundOvalShape {
+  position: absolute;
+  height: 120px;
+  width: 100%;
+  background-color: #ffd4a5;
+  border-radius: 50%;
+  top: 55px;
+}
+
+.topBackgroundCurveShape {
+  width: 100%;
+}
+
+/*# sourceMappingURL=topBackgroundCurveShape.css.map */

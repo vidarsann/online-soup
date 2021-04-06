@@ -1,0 +1,135 @@
+.receiptViewDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background-color: #ffd4a5;
+}
+
+.receiptTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  height: 100px;
+  width: 330px;
+  border-radius: 12px;
+}
+.receiptTop h1 {
+  font-family: Thasadith, Helvetica, sans-serif;
+  margin-top: 40px;
+}
+.receiptTop p {
+  font-family: Tinos, Helvetica, sans-serif;
+  width: 80%;
+  text-align: center;
+  padding-bottom: 1px;
+}
+
+.receiptCheck {
+  position: absolute;
+  top: 10px;
+}
+
+.orbContainerDiv {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  width: 100%;
+  position: absolute;
+  top: 99px;
+}
+
+.orbLeft {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  background-color: #ffd4a5;
+  position: absolute;
+  left: 0%;
+}
+
+.orbRight {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  background-color: #ffd4a5;
+  position: absolute;
+  right: 0;
+}
+
+.receiptBody {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 330px;
+  min-height: 550px;
+  background-color: white;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.receiptBody h4 {
+  font-family: Tinos, Helvetica, sans-serif;
+}
+
+.receiptItems {
+  width: 95%;
+}
+
+.renderedReceiptItem {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+.renderedReceiptItem h4 {
+  margin-left: 10px;
+  color: lightgrey;
+}
+.renderedReceiptItem h3 {
+  font-family: Tinos, Helvetica, sans-serif;
+  margin-left: 15px;
+}
+
+.priceDiv {
+  position: absolute;
+  right: 12%;
+  padding-top: 75px;
+}
+
+.bouquetAndCardDisplay {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 70px;
+  margin-left: 20px;
+}
+
+.bouquetDisplayText, .cardDisplayText {
+  display: flex;
+}
+
+.totalDiv {
+  margin-top: 3%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 10% 0 15%;
+}
+.totalDiv h3 {
+  font-family: Tinos, Helvetica, sans-serif;
+}
+
+.trackOrderButton {
+  font-family: Tinos, Helvetica, sans-serif;
+  font-size: xx-large;
+  border: none;
+  border-radius: 10px;
+  margin-top: 5%;
+  width: 330px;
+  height: 70px;
+  background-color: rgba(186, 204, 140, 0.75);
+  box-shadow: 0px 3px 5px 1px grey;
+}
+
+/*# sourceMappingURL=receipt.css.map */

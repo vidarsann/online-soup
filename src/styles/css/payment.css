@@ -1,0 +1,64 @@
+.paymentViewDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.paymentViewDiv h1 {
+  text-align: center;
+  z-index: 5;
+  font-family: Thasadith, Helvetica, sans-serif;
+}
+
+.paymentOptionCollection {
+  margin-top: 150px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.paymentOption {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 10%;
+}
+
+.paymentImageDiv {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  padding-right: 10%;
+}
+
+.paymentNameDiv {
+  font-family: Thasadith, Helvetica, sans-serif;
+  width: 50%;
+  padding-left: 5%;
+}
+
+.discountCodeForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.discountCodeInput {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 25px;
+  width: 60%;
+  border: none;
+  box-shadow: inset 0px 1px 3px 3px lightgrey, 0px 4px 5px 2px lightgrey;
+}
+
+.submitButton {
+  width: 30%;
+  height: 25px;
+  border: none;
+  border-radius: 3px;
+  background-color: #ffd4a5;
+  box-shadow: 0px 2px 5px 1px grey;
+}
+
+/*# sourceMappingURL=payment.css.map */

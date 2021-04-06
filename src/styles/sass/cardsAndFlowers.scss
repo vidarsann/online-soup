@@ -1,0 +1,85 @@
+@use 'base';
+
+.cardsAndFlowersView{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+
+    h1{
+        z-index: 1;
+        font-family: base.$headline-stack;
+        font-size: xxx-large;
+        font-weight: 100;
+    }
+
+    h2{
+        font-family: base.$headline-stack;
+    }
+}
+
+.chooseBouquetDiv{
+    margin-top: 15px;
+    width: 90%;
+}
+
+.bouquetItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    font-family: base.$subtext-stack;
+
+    input{
+        height: 25px;
+        width: 25px;
+    }
+}
+
+.mediumFlowers{
+    margin-left: 35px;
+}
+
+.mediumh3{
+    margin-left: 28px;
+}
+
+.smallFlowers{
+    margin-left: 14px;
+}
+
+.customizedGreetingTextArea{
+    padding: 5px;
+    margin-top: 12%;
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: inset 0px 1px 3px 3px lightgrey, 0px 4px 5px 2px lightgrey;
+    border: 1px solid grey;
+    font-family: base.$subtext-stack;
+}
+
+textarea:active, textarea:focus{
+    outline:0px !important;
+    -webkit-appearance: none;
+}
+
+.customizedGreetingTextArea::placeholder{
+    text-align: center;
+    font-family: base.$headline-stack;
+    font-size: x-large;
+    padding-top: 10%;
+}
+
+.continueButton{
+    width: 100vw;
+    position: fixed;
+    height: 90px;
+    bottom: 0;
+    background-color: base.$primary-color;
+    font-family: base.$headline-stack;
+    font-size: xx-large;
+    outline: none;
+    border: none;
+}

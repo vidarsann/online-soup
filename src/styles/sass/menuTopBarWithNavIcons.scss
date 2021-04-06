@@ -1,0 +1,28 @@
+.menuTopBarWithNavIcons{
+    height: 50px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3% 0 3%;
+
+    img{
+        height: 45%;
+        z-index: 1;
+    }
+
+    h1{
+        z-index: 2;
+    }
+}
+
+.cart{
+    height: 65% !important;
+}
+
+.heart{
+    height: 65% !important;
+    margin-top: 3vh;
+    margin-right: 2vw;
+}

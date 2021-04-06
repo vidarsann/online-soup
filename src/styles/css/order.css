@@ -1,0 +1,191 @@
+.orderAndFlowersDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.orderAndFlowersDiv h1, .orderAndFlowersDiv h3 {
+  z-index: 1;
+  font-family: Thasadith, Helvetica, sans-serif;
+}
+.orderAndFlowersDiv h1 {
+  font-size: xxx-large;
+}
+
+.orderItems {
+  margin-top: 20%;
+  margin-bottom: 90px;
+}
+
+.orderItem {
+  display: flex;
+  margin-bottom: 20px;
+}
+.orderItem img {
+  height: 120px;
+  width: 120px;
+  border-radius: 100%;
+}
+.orderItem h2 {
+  font-family: Thasadith, Helvetica, sans-serif;
+}
+.orderItem p {
+  font-family: Tinos, Helvetica, sans-serif;
+  color: grey;
+  font-size: small;
+}
+
+.pictureAndQuantity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nameAndIngredients {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  padding-left: 15px;
+  padding-top: 20px;
+}
+.nameAndIngredients h2 {
+  padding-bottom: 10px;
+}
+
+.ingredientsAndNutrients {
+  display: flex;
+}
+.ingredientsAndNutrients div {
+  margin-right: 15px;
+}
+
+.ingredients {
+  border-left: 1px solid grey;
+  padding-left: 4px;
+}
+
+.priceDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 20%;
+}
+.priceDiv h2 {
+  font-family: Tinos, Helvetica, sans-serif;
+}
+
+.dropDownController {
+  width: 80px;
+  margin-top: 10px;
+}
+
+.continueButton {
+  width: 100vw;
+  position: fixed;
+  height: 90px;
+  bottom: 0;
+  background-color: #ffd4a5;
+  font-family: Thasadith, Helvetica, sans-serif;
+  font-size: xx-large;
+  outline: none;
+  border: none;
+}
+
+#popupOverlay {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#popupOverlay.hide {
+  display: none;
+}
+
+#popupOverlay.show {
+  display: block;
+}
+
+.popupMessage {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 300px;
+  background-color: white;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  border-radius: 10px;
+  padding: 7px;
+  align-items: center;
+}
+.popupMessage h2 {
+  font-family: Tinos, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+.exitButton {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.popupIcons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.popupIcons h1 {
+  color: darkgray;
+}
+
+.addFlowersAndCardbutton {
+  width: 60%;
+  height: 60px;
+  border: none;
+  border-radius: 7px;
+  background-color: #ffd4a5;
+  font-family: Thasadith, Helvetica, sans-serif;
+  font-size: xx-large;
+}
+
+.cardAndFlowerItem {
+  font-family: Tinos, Helvetica, sans-serif;
+  display: flex;
+}
+.cardAndFlowerItem p {
+  font-size: small;
+}
+
+.cardAndFlowerPicture {
+  display: flex;
+  align-items: center;
+}
+
+.titleAndGreeting {
+  padding-left: 5%;
+}
+.titleAndGreeting h2 {
+  margin-bottom: 5%;
+  font-family: Thasadith, Helvetica, sans-serif !important;
+}
+
+.bouquetPriceDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 10%;
+}
+.bouquetPriceDiv h2 {
+  font-family: Tinos, Helvetica, sans-serif;
+}
+
+/*# sourceMappingURL=order.css.map */
