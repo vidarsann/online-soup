@@ -10,6 +10,7 @@ import menuSlider1 from '../assets/menuSliders/menuSlider1.png';
 import menuSlider2 from '../assets/menuSliders/menuSlider2.jpg';
 import menuSlider3 from '../assets/menuSliders/menuSlider3.jpg';
 import menuSlider4 from '../assets/menuSliders/menuSlider4.jpg';
+import ingredientIcon from '../assets/ingredient.png';
 import vegetarianIcon from '../assets/menuItemProps/vegetarian.png'
 import basketIcon from '../assets/basket.png'
 import itemData from './itemData';
@@ -21,10 +22,10 @@ function Carousel () {
     const handleDragStart = (e) => e.preventDefault();
 
     const items = [
-        [<img src={menuSlider1} onDragStart={handleDragStart} />, <div className="menuSliderText"><h3>Lunch of the day</h3><p>Get 20% off</p></div>],
-        [<img src={menuSlider2} onDragStart={handleDragStart} />, <div className="menuSliderText"><h3>Try our lentil soup</h3><p>Delicious and nutritious!</p></div>],
-        [<img src={menuSlider3} onDragStart={handleDragStart} />, <div className="menuSliderText"><h3>Share your soup online...</h3><p>...and get a discount code</p></div>],
-        [<img src={menuSlider4} onDragStart={handleDragStart} />, <div className="menuSliderText"><h3>Send a soup to a loved one</h3><p>They will thank you for it!</p></div>]
+        [<img src={menuSlider1} alt="Lunch of the day" onDragStart={handleDragStart} />, <div className="menuSliderText"><h3>Lunch of the day</h3><p>Get 20% off</p></div>],
+        [<img src={menuSlider2} alt="Try our lentil soup" onDragStart={handleDragStart} />, <div className="menuSliderText"><h3>Try our lentil soup</h3><p>Delicious and nutritious!</p></div>],
+        [<img src={menuSlider3} alt="Share your soup online" onDragStart={handleDragStart} />, <div className="menuSliderText"><h3>Share your soup online...</h3><p>...and get a discount code</p></div>],
+        [<img src={menuSlider4} alt="Share a soup with a loved one" onDragStart={handleDragStart} />, <div className="menuSliderText"><h3>Send a soup to a loved one</h3><p>They will thank you for it!</p></div>]
     ];
 
     const SlideShow = <AliceCarousel
@@ -43,19 +44,16 @@ function MenuItem(props){
         <div className="menuItemMiniature" onClick={() => props.onClickedMenuItem(props.id)}>
             <div className="titleAndVegetarian">
                 <h2>{props.itemTitle}</h2>
-                {props.vegetarian ? <img src={vegetarianIcon}/> : null}
+                {props.vegetarian ? <img src={vegetarianIcon} alt="Vegetarian" className="vegetarianIcon"/> : null}
             </div>
             <h3>{props.price + ";-"}</h3>
-            <img src={props.imageSource} className="menuItemRoundedPicture"/>
-            <img className="menuItemCircleImage"/>
+            {props.imageSource}
             <p>{props.description}</p>
         </div>
     )
 }
 
 function ClickedMenuItemSlideOut(props) {
-    console.log(props);
-
     const defaultItemObject = {
         id: 0,
         name: "name",
@@ -113,7 +111,7 @@ function ClickedMenuItemSlideOut(props) {
             <TopBackgroundCurveShape/>
             <MenuTopBarWithNavIcons leftItem={"goBack"} leftItemOnClick={props.goBackToMenu} rightItem={"favorite"}/>
             <div className="slideOutSoupMainPictureDiv">
-                <img src={menuSlider1} className="slideOutSoupMainPicture" />
+                {selectedItemObjectData.image}
             </div>
             <div className="slideOutSoupInfoDiv">
                 <div className="slideOutTitleAndVegetarian">
@@ -133,7 +131,7 @@ function ClickedMenuItemSlideOut(props) {
                 {selectedItemObjectData.ingredients.map(function (ingredient){
                     return (
                         <div className="ingredientDiv">
-                            <img src={menuSlider1} className="ingredientPicture" alt={ingredient}/>
+                            <img src={ingredientIcon} className="ingredientPicture" alt={ingredient}/>
                             <p>{ingredient}</p>
                         </div>
                     )
@@ -145,8 +143,6 @@ function ClickedMenuItemSlideOut(props) {
 }
 
 function MenuView (menuProps) {
-
-    console.log(menuProps);
     
     const [expandedMenuItem, setExpandedMenuItem] = useState();
     const history = useHistory();
@@ -166,7 +162,7 @@ function MenuView (menuProps) {
     return(
         <div className="menuWithFoodItems">
             <ClickedMenuItemSlideOut expandedItemIndex={expandedMenuItem} goBackToMenu={goBackToMenu} addItemToCart={menuProps.addItemToCart}/>
-            <MenuTopBarWithNavIcons leftItem={"menu"} rightItem={"cart"} rightItemOnClick={goToOrderView} totalItems={menuProps.state.totalItems}/>
+            <MenuTopBarWithNavIcons leftItem={"menu"} rightItem={"cart"} leftItemOnClick={menuProps.manageSlideOut} rightItemOnClick={goToOrderView} totalItems={menuProps.state.totalItems}/>
             <Carousel/>
             <div className="menuTitle">
                 <h1>Menu</h1>
@@ -175,7 +171,7 @@ function MenuView (menuProps) {
                 {itemData.map(function (item) {
                     return <MenuItem
                         itemTitle={item.name}
-                        imageSource={menuSlider1}
+                        imageSource={item.image}
                         price={item.price}
                         description={item.description}
                         vegetarian={item.vegetarian}

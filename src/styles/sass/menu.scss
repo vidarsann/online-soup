@@ -7,9 +7,11 @@
 }
 
 .alice-carousel{
+
     img{
         width: 100%;
         height: 250px;
+        object-fit: cover;
     }
 }
 
@@ -58,6 +60,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .menuTitle{
@@ -90,19 +93,19 @@
         margin: 3px 12px 0px 0px;
         font-size: x-large;
     }
+
+    :nth-child(3){
+        border-radius: 50%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+    }
 }
 
 .menuItemMiniature:last-child{
     margin-bottom: 60px;
-}
-
-.menuItemRoundedPicture{
-    border-radius: 50%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
 }
 
 .titleAndVegetarian{
@@ -125,7 +128,7 @@
     top: 0;
     transition: transform 0.5s;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-color: white;
     z-index: 10;
 
@@ -139,11 +142,11 @@
 }
 
 #clickedMenuItemSlideOut.hide{
-    transform: translate3d(100vw, 0, 0)
+    transform: translate3d(100vw, 0, 0);
 }
 
 #clickedMenuItemSlideOut.show{
-    transform: translate3d(0vw, 0, 0)
+    transform: translate3d(0vw, 0, 0);
 }
 
 .topBackgroundRectangleShape{
@@ -166,14 +169,14 @@
     width: 100%;
     text-align: center;
     z-index: 1;
-}
 
-.slideOutSoupMainPicture{
-    border-radius: 100%;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    background-color: white;
+    img{
+        border-radius: 100%;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        background-color: white;
+    }
 }
 
 .slideOutSoupInfoDiv{
@@ -233,7 +236,7 @@
     flex-direction: column;
     align-items: center;
     width: 80%;
-    margin-top: 5%;
+    margin-top: 20px;
 
     p, h3{
         color: rgb(111 111 111);
@@ -249,7 +252,7 @@
     display: flex;
     width: 100%;
     align-items: center;
-    padding-left: 15%;
+    padding-left: 25%;
     margin-top: 3%;
 
     p{
@@ -276,7 +279,7 @@
     width: 65%;
     height: 40px;
     max-width: 260px;
-    margin-top: 10%;
+    margin-top: 25px;
     background-color: base.$primary-color;
 }
 

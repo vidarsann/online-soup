@@ -1,0 +1,73 @@
+@use 'base';
+
+.shareViewDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+    h1{
+        z-index: 1;
+        font-family: base.$headline-stack;
+    }
+}
+
+.shareYourSoupText{
+    font-family: base.$subtext-stack;
+    text-align: center;
+    padding: 5% 30px 5% 30px;
+}
+
+.shareSoupImage{
+    margin-top: 5%;
+    z-index: 1;
+}
+
+.renderedSoupItems{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 6%;
+    width: 100%;
+    min-height: 5vh;
+    z-index: 1;
+
+    & .soupItem{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: base.$headline-stack;
+        padding: 10px 10px 0 10px;
+        min-width: 100px;
+        flex: 1;
+
+        & .soupItemAmountAndName {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img{
+            height: 70px;
+            width: 70px;
+            border-radius: 100%;
+        }
+
+        h4{
+            margin-right: 5px;
+            color: grey;
+        }
+
+        & .shareIcon{
+            margin: 5px 0 5px 0;
+            height: 20px;
+            width: 20px;
+        }
+    }
+}
+
+.socialMediaIcons{
+    margin: 6% 0 6% 0;
+}

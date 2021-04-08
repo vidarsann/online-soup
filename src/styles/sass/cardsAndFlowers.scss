@@ -20,7 +20,7 @@
 }
 
 .chooseBouquetDiv{
-    margin-top: 15px;
+    margin-top: 15%;
     width: 90%;
 }
 
@@ -82,4 +82,14 @@ textarea:active, textarea:focus{
     font-size: xx-large;
     outline: none;
     border: none;
+}
+
+@media screen and(min-width: 710px){
+    .chooseBouquetDiv{
+        margin-top: 100px !important;
+    }
+
+    .customizedGreetingTextArea{
+        margin-top: 150px;
+    }
 }

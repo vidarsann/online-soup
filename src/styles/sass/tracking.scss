@@ -1,0 +1,141 @@
+@use 'base';
+
+.trackingViewDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1{
+        font-family: base.$headline-stack;
+        z-index: 1;
+    }
+}
+
+.countDownTimer{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    width: 150px;
+    font-family: base.$subtext-stack;
+}
+
+.renderedSoupItems{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 6%;
+    width: 100%;
+    min-height: 5vh;
+    z-index: 1;
+
+    & .soupItem{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: base.$headline-stack;
+        padding: 10px 10px 0 10px;
+        min-width: 100px;
+        flex: 1;
+
+        & .soupItemAmountAndName {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img{
+            height: 70px;
+            width: 70px;
+            border-radius: 100%;
+        }
+
+        h4{
+            margin-right: 5px;
+            color: grey;
+        }
+    }
+}
+
+.progressBar{
+    margin-top: 2%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    & .progressBartext{
+        padding-top: 5px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        h5{
+            font-family: base.$subtext-stack;
+            padding: 0 3px 0 3px;
+            width: 22%;
+            max-width: 230px;
+            text-align: center;
+        }
+    }
+
+    & .progressBarDots{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        & :last-child{
+            width: auto !important;
+        }
+    }
+
+    & .progressDotWithExtension{
+        display: flex;
+        align-items: center;
+        width: 22%;
+        max-width: 230px;
+
+        & .activeDot{
+            background-color: rgba(255, 228, 177, 1) !important;
+        }   
+
+        & .progressDot{
+            height: 20px;
+            width: 20px !important;
+            background-color: grey;
+            border-radius: 100%;
+        }
+
+        & .progressDotExtension{
+            flex-grow: 1;
+            height: 2px;
+            background-color: grey;
+        }
+    }
+}
+
+#mapDiv{
+    margin-top: 5%;
+    height: 45vh;
+    width: 100%;
+    max-width: 1500px;
+}
+
+.leaflet-container{
+    height: 100%;
+    width: 100%;
+}
+
+.shareRouteButton{
+    border: none;
+    background-color: base.$primary-color;
+    margin-bottom: 3%;
+    margin-top: 8%;
+    width: 35%;
+    height: 30px;
+    max-width: 150px;
+    border-radius: 7px;
+    box-shadow: 0px 3px 4px 0px grey;
+    font-family: base.$headline-stack;
+    font-size: larger;
+}

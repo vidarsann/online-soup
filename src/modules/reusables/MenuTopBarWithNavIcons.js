@@ -1,17 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import '../../styles/css/menuTopBarWithNavIcons.css';
 
+import { useHistory } from 'react-router-dom';
+
 import cart from '../../assets/topNavBarAssets/cart.png';
 import cartWithItems from '../../assets/topNavBarAssets/cart-with-item.png';
 import favorite from '../../assets/topNavBarAssets/favorite.png';
 import menu from '../../assets/topNavBarAssets/menu.png';
+import goBack from '../../assets/topNavBarAssets/goBack.png';
 
 function MenuTopBarWithNavIcons(props) {
+
+    const history = useHistory();
 
     const [renderedLeftOption, setRenderedLeftOption] = useState();
     const [renderedRightOption, setRenderedRightOption] = useState();
 
-    console.log(props)
+    function backToPreviousScreen(){
+        history.goBack();
+    }
     
     useEffect(() => {
         switch(props.leftItem){
@@ -19,7 +26,7 @@ function MenuTopBarWithNavIcons(props) {
                 setRenderedLeftOption(<img src={menu} onClick={() => props.leftItemOnClick()} alt="Open menu"/>)
                 break;
             case "goBack":
-                setRenderedLeftOption(<h1 onClick={() => props.leftItemOnClick()}>{"<"}</h1>)
+                setRenderedLeftOption(<img src={goBack} onClick={() => props.leftItemOnClick ? props.leftItemOnClick() : backToPreviousScreen()} alt="Go back"/>)
                 break;
             default:
                 setRenderedLeftOption(null);
@@ -30,7 +37,10 @@ function MenuTopBarWithNavIcons(props) {
                 setRenderedRightOption(<img src={favorite} onClick={() => props.righItemOnClick()} alt="Favorite this item" className="heart"/>)
                 break;
             case "cart":
-                setRenderedRightOption(<img src={props.totalItems === 0 ? cart : cartWithItems} onClick={() => props.rightItemOnClick()} alt="Check your shopping cart" className="cart"/>)
+                setRenderedRightOption(<img src={props.totalItems > 0 ? cartWithItems : cart} onClick={() => props.rightItemOnClick()} alt="Check your shopping cart" className="cart"/>)
+                break;
+            case "menu":
+                setRenderedRightOption(<img src={menu} onClick={() => props.rightItemOnClick()} alt="Open menu"/>)
                 break;
             default:
                 setRenderedRightOption(null);

@@ -1,0 +1,66 @@
+.shareViewDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.shareViewDiv h1 {
+  z-index: 1;
+  font-family: Thasadith, Helvetica, sans-serif;
+}
+
+.shareYourSoupText {
+  font-family: Tinos, Helvetica, sans-serif;
+  text-align: center;
+  padding: 5% 30px 5% 30px;
+}
+
+.shareSoupImage {
+  margin-top: 5%;
+  z-index: 1;
+}
+
+.renderedSoupItems {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-top: 6%;
+  width: 100%;
+  min-height: 5vh;
+  z-index: 1;
+}
+.renderedSoupItems .soupItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Thasadith, Helvetica, sans-serif;
+  padding: 10px 10px 0 10px;
+  min-width: 100px;
+  flex: 1;
+}
+.renderedSoupItems .soupItem .soupItemAmountAndName {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.renderedSoupItems .soupItem img {
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+}
+.renderedSoupItems .soupItem h4 {
+  margin-right: 5px;
+  color: grey;
+}
+.renderedSoupItems .soupItem .shareIcon {
+  margin: 5px 0 5px 0;
+  height: 20px;
+  width: 20px;
+}
+
+.socialMediaIcons {
+  margin: 6% 0 6% 0;
+}
+
+/*# sourceMappingURL=share.css.map */

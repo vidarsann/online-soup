@@ -1,10 +1,12 @@
-$primary-color: white;
+@use 'base';
 
 .App {
-  height: 100vh;
+  height: 100%;
   font: 100% Helvetica, sans-serif;
-  background-color: $primary-color;
+  background-color: white;
 }
+
+//Dropdown annotation
 
 #dropDownAnnotation{
     position: fixed;
@@ -30,5 +32,69 @@ $primary-color: white;
 }
 
 #dropDownAnnotation.show{
+    transform: translate3d(0, 0, 0)
+}
+
+//Slideout menu
+
+#slideOutMenu{
+    position: fixed;
+    display: flex;
+    width: 70%;
+    max-width: 350px;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+    left: 0;
+    top: 0;
+    background-color: base.$primary-color-with-slight-opacity;
+    z-index: 10000;
+
+    & .soupOnlineLogo{
+        width: 100%;
+        padding-right: 5%;
+    }
+
+    & .slideOutMenuItem{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        font-family: base.$headline-stack;
+        font-size: x-large;
+        padding: 2% 0 4% 0;
+
+        &:last-child{
+            padding-left: 20%;
+            padding-top: 30px;
+    
+            img{
+                height: auto;
+                width: 20px;
+            }
+        }
+
+        img{
+            height: 20px;
+            width: 20px;
+            margin-right: 20px;
+        }
+    }
+
+    .signOutDiv{
+        display: flex;
+        margin-top: auto;
+        padding-bottom: 8%;
+    }
+}
+
+#slideOutMenu.hide{
+    transform: translate3d(-350px, 0, 0)
+}
+
+#slideOutMenu.show{
     transform: translate3d(0, 0, 0)
 }

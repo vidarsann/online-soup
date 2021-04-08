@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
   background-color: #ffd4a5;
 }
 
@@ -10,6 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: static;
   background-color: white;
   height: 100px;
   width: 330px;
@@ -37,27 +37,27 @@
   display: flex;
   justify-content: space-between;
   height: 30px;
-  width: 100%;
+  width: 330px;
   position: absolute;
   top: 99px;
 }
 
 .orbLeft {
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
   border-radius: 100%;
   background-color: #ffd4a5;
   position: absolute;
-  left: 0%;
+  left: -22px;
 }
 
 .orbRight {
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
   border-radius: 100%;
   background-color: #ffd4a5;
   position: absolute;
-  right: 0;
+  right: -22px;
 }
 
 .receiptBody {
@@ -93,11 +93,15 @@
   font-family: Tinos, Helvetica, sans-serif;
   margin-left: 15px;
 }
+.renderedReceiptItem img {
+  border-radius: 100%;
+  height: 80px;
+  width: 80px;
+}
 
-.priceDiv {
-  position: absolute;
-  right: 12%;
-  padding-top: 75px;
+.receiptPriceDiv {
+  padding-bottom: 55px;
+  margin-left: auto !important;
 }
 
 .bouquetAndCardDisplay {
@@ -129,6 +133,7 @@
   border: none;
   border-radius: 10px;
   margin-top: 5%;
+  margin-bottom: 30px;
   width: 330px;
   height: 70px;
   background-color: rgba(186, 204, 140, 0.75);
@@ -138,6 +143,22 @@
 .cookingChefImg {
   margin-top: auto;
   padding: 10px 0 10px 0;
+}
+
+.paymentOptionDiv {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10% 0 15%;
+}
+.paymentOptionDiv div {
+  display: flex;
+  align-items: center;
+}
+.paymentOptionDiv img {
+  margin-left: 10px;
+  max-block-size: 20px;
 }
 
 /*# sourceMappingURL=receipt.css.map */

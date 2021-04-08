@@ -7,6 +7,7 @@
 .alice-carousel img {
   width: 100%;
   height: 250px;
+  object-fit: cover;
 }
 
 .alice-carousel__dots {
@@ -80,18 +81,17 @@
   margin: 3px 12px 0px 0px;
   font-size: x-large;
 }
-
-.menuItemMiniature:last-child {
-  margin-bottom: 60px;
-}
-
-.menuItemRoundedPicture {
+.menuItemMiniature :nth-child(3) {
   border-radius: 50%;
   margin-top: 20px;
   margin-bottom: 20px;
   width: 180px;
   height: 180px;
   object-fit: cover;
+}
+
+.menuItemMiniature:last-child {
+  margin-bottom: 60px;
 }
 
 .titleAndVegetarian {
@@ -111,7 +111,7 @@
   top: 0;
   transition: transform 0.5s;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-color: white;
   z-index: 10;
 }
@@ -151,8 +151,7 @@
   text-align: center;
   z-index: 1;
 }
-
-.slideOutSoupMainPicture {
+.slideOutSoupMainPictureDiv img {
   border-radius: 100%;
   width: 200px;
   height: 200px;
@@ -213,7 +212,7 @@
   flex-direction: column;
   align-items: center;
   width: 80%;
-  margin-top: 5%;
+  margin-top: 20px;
 }
 .ingredientsAddToBasketDiv p, .ingredientsAddToBasketDiv h3 {
   color: #6f6f6f;
@@ -227,7 +226,7 @@
   display: flex;
   width: 100%;
   align-items: center;
-  padding-left: 15%;
+  padding-left: 25%;
   margin-top: 3%;
 }
 .ingredientDiv p {
@@ -253,7 +252,7 @@
   width: 65%;
   height: 40px;
   max-width: 260px;
-  margin-top: 10%;
+  margin-top: 25px;
   background-color: #ffd4a5;
 }
 

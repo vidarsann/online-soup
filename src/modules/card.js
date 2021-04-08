@@ -49,7 +49,7 @@ function EditFlowersAndCardView(props){
     return(
         <div className="cardsAndFlowersView">
             <TopBackgroundCurveShape />
-            <MenuTopBarWithNavIcons leftItem="menu" />
+            <MenuTopBarWithNavIcons leftItem="menu" leftItemOnClick={props.manageSlideOut}/>
             <h1>Customize your card</h1>
             <div className="chooseBouquetDiv">
                 <h2>Choose bouquet size</h2>

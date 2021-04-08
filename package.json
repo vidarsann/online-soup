@@ -11,7 +11,6 @@
     "react-alice-carousel": "^2.4.0",
     "react-dom": "^17.0.1",
     "react-leaflet": "^3.1.0",
-    "react-redux": "^7.2.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-select": "^4.3.0",

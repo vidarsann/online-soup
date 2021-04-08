@@ -1,4 +1,3 @@
-import TopBackgroundCurveShape from './reusables/TopBackgroundCurveShape';
 import MenuTopBarWithNavIcons from './reusables/MenuTopBarWithNavIcons';
 import { useHistory } from 'react-router-dom';
 
@@ -9,20 +8,28 @@ import cookingChef from '../assets/receiptAssets/cookingChef.png';
 
 import itemData from './itemData';
 import cardData from './cardData';
+import paymentOptionArray from './paymentOptionData';
 
 function ReceiptView(props){
+
+    const history = useHistory();
+
+    function goToTrackingView () {
+        history.push('/tracking');
+    }
 
     function capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
 
     function FoodItem ({item}) {
+        console.log(item);
         return(
             <div className="renderedReceiptItem">
-                <img src={check} alt="foodItem" className="receiptItemPicture"/>
+                {itemData[item.id].image}
                 <h4>x{item.amount}</h4>
                 <h3>{itemData[item.id].name}</h3>
-                <h3 className="priceDiv">{itemData[item.id].price};-</h3>
+                <h3 className="receiptPriceDiv">{itemData[item.id].price};-</h3>
             </div>
         )
     }
@@ -41,7 +48,7 @@ function ReceiptView(props){
                         <h3>Custom card</h3>
                     </div>
                 </div>
-                <h3 className="priceDiv">{cardData[flowerAndCardProps.id].price};-</h3>
+                <h3 className="receiptPriceDiv">{cardData[flowerAndCardProps.id].price};-</h3>
             </div>
         )
     }
@@ -59,12 +66,20 @@ function ReceiptView(props){
                 </div>
             </div>
             <div className="receiptBody">
-                <h4>Deliver to: address</h4>
+                <h4>Deliver to: {props.state.mapLatLng[0]} {props.state.mapLatLng[1]}</h4>
                 <div className="receiptItems">
                     {props.state.cartItems.map(item => {
                         return item.amount > 0 ? <FoodItem item={item}/> : null;
                     })}
                     {props.state.flowersAndCard.id !== undefined ? <FlowerAndCardItem flowerAndCardProps={props.state.flowersAndCard}/> : null}
+                </div>
+                <div className="paymentOptionDiv">
+                    <div/>
+                    <div/>
+                    <div>
+                        <h4>Payment:</h4>
+                        {paymentOptionArray[props.state.paymentOptionId].image}
+                    </div>
                 </div>
                 <div className="totalDiv">
                     <div/>
@@ -73,7 +88,7 @@ function ReceiptView(props){
                 </div>
                 <img src={cookingChef} alt="" className="cookingChefImg"/> 
             </div>
-            <button className="trackOrderButton">Track your order</button>
+            <button className="trackOrderButton" onClick={goToTrackingView}>Track your order</button>
         </div>
     )
 }

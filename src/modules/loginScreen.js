@@ -14,9 +14,9 @@ function Carousel () {
     const handleDragStart = (e) => e.preventDefault();
 
     const items = [
-        [<img src={craving} onDragStart={handleDragStart} />, <h2 className="slideShowText">Craving a soup?</h2>],
-        [<img src={sick} onDragStart={handleDragStart} />, <h2 className="slideShowText">Having a friend in need of a boost?</h2>],
-        [<img src={soupOnTruck} onDragStart={handleDragStart} />, <h2 className="slideShowText">We deliver the soup!</h2>],
+        [<img src={craving} alt="Craving a soup?" onDragStart={handleDragStart} />, <h2 className="slideShowText">Craving a soup?</h2>],
+        [<img src={sick} alt="Having a friend in need of a boost?" onDragStart={handleDragStart} />, <h2 className="slideShowText">Having a friend in need of a boost?</h2>],
+        [<img src={soupOnTruck} alt="We deliver the soup!" onDragStart={handleDragStart} />, <h2 className="slideShowText">We deliver the soup!</h2>],
     ];
 
     const SlideShow = <AliceCarousel
@@ -38,20 +38,20 @@ function LoginScreen () {
 
     return(
         <div className="loginScreen">
-            <img src={soupOnline} className="titlePicture"/>
+            <img src={soupOnline} alt="Soup online logo"className="titlePicture"/>
             <Carousel/>
             <div className="inversedTopOvalCurvedRectangle">
                 <div className="loginContainer">
                     <div className="loginForm">
                         <form onSubmit={handleSubmit}>
                             <input type="text" value="+46" disabled id="disabledCellNumberInput"/>
-                            <input type="number" id="interactiveCellNumberInput" placeholder="Your number here.." onChange={(e) => handleChange(e.target.value)} value={phoneNumber}></input>
+                            <input type="number" id="interactiveCellNumberInput" placeholder="Phone number" onChange={(e) => handleChange(e.target.value)} value={phoneNumber}></input>
                             <input type="submit" className="loginSubmitButton"/>
                         </form>
                     </div>
                     <p>or</p>
                     <button type="button" className="facebookButton" onClick={handleSubmit}>
-                        <img src={facebook}></img>
+                        <img src={facebook} alt="Facebook login"></img>
                         <p>Continue with facebook</p>
                     </button>
                 </div>

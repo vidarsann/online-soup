@@ -4,6 +4,6 @@
     box-sizing: border-box;
 }
 
-html, body, #app, #app>div, #root {
-    min-height: 100vh;
+html, body, #app, #app>div, #root, .routeParentDiv {
+    height: 100%;
 }

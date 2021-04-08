@@ -1,43 +1,21 @@
 import TopBackgroundCurveShape from './reusables/TopBackgroundCurveShape';
 import MenuTopBarWithNavIcons from './reusables/MenuTopBarWithNavIcons';
+import paymentOptionArray from './paymentOptionData';
 import { useHistory } from 'react-router-dom';
 
 import '../styles/css/payment.css';
 
-import applePay from '../assets/paymentAssets/applePay.png';
-import creditCard from '../assets/paymentAssets/creditCard.png';
-import paypal from '../assets/paymentAssets/paypal.png';
-import swish from '../assets/paymentAssets/swish.png';
-
-function PaymentView() {
+function PaymentView(props) {
     const history = useHistory();
 
-    function goToReceiptView () {
+    function returnPaymentOptionAndGoToReceiptView (optionObject) {
+        props.addPaymentOption(optionObject.id);
         history.push('/receipt');
     }
 
-    const paymentOptionArray = [
-        {
-            name: "Apple Pay",
-            image: <img src={applePay} alt="Apple Pay"/>
-        },
-        {
-            name: "PayPal",
-            image: <img src={paypal} alt="Paypal"/>
-        },
-        {
-            name: "Credit card",
-            image: <img src={creditCard} alt="Credit card"/>
-        },
-        {
-            name: "Swish",
-            image: <img src={swish} alt="Swish"/>
-        },
-    ]
-
     function PaymentOption ({props}) {
         return (
-            <div className="paymentOption" onClick={goToReceiptView}>
+            <div className="paymentOption" onClick={() => returnPaymentOptionAndGoToReceiptView(props)}>
                 <div className="paymentImageDiv">
                 {props.image}
                 </div>
@@ -48,10 +26,15 @@ function PaymentView() {
         )
     }
 
+    function handleSubmit (e) {
+        e.preventDefault();
+        console.log("Submitted!")
+    }
+
     return (
         <div className="paymentViewDiv">
             <TopBackgroundCurveShape />
-            <MenuTopBarWithNavIcons leftItem={"menu"} />
+            <MenuTopBarWithNavIcons leftItem={"menu"} leftItemOnClick={props.manageSlideOut}/>
             <h1>Choose your payment method</h1>
             <div className="paymentOptionCollection">
                 {paymentOptionArray.map(option => {
@@ -59,7 +42,7 @@ function PaymentView() {
                 })}
             </div>
             <h3>Add discount code:</h3>
-            <form className="discountCodeForm">
+            <form className="discountCodeForm" onSubmit={(e) => handleSubmit(e)}>
                 <input type="text" className="discountCodeInput"/>
                 <input type="submit" className="submitButton"/>
             </form>
